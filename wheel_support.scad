@@ -1,3 +1,5 @@
+% soporte motor curiosity escala grande (proyecto aparcado)
+
 $fn=72;
 
 difference(){
