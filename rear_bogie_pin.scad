@@ -15,7 +15,7 @@ cylinder(d=20,h=4);
 translate([0,0,-1])cylinder(d=8,h=9);
 translate([0,0,2])cylinder(d=10.2,h=9);
 for(i=[0:120:240]){
-    rotate([0,0,i+26])
+    rotate([0,0,i+34])
     translate([7.5,0,-1])cylinder(d=2.2,h=7);
 }
 }
