@@ -6,9 +6,9 @@ bracket();
 
 difference(){
 translate([0,23,0])rotate([0,0,30])
-bar(44);
+bar(42);
 translate([0,23,3.5])rotate([0,0,30])translate([48,0,0])
-cylinder(d=16,h=7);
+cylinder(d=20,h=7);
 }
 
 translate([0,23,0])rotate([0,0,30])translate([48,0,0])
@@ -16,11 +16,12 @@ pin();
 
 module pin(){
 difference(){
-cylinder(d=16,h=3.5);
-translate([0,0,-1])cylinder(d=6,h=9);
+cylinder(d=20,h=4);
+translate([0,0,-1])cylinder(d=8,h=9);
+translate([0,0,2])cylinder(d=10.2,h=9);
 for(i=[0:120:240]){
     rotate([0,0,i])
-    translate([6,0,-1])cylinder(d=2.2,h=5);
+    translate([7.5,0,-1])cylinder(d=2.2,h=7);
 }
 }
 }
