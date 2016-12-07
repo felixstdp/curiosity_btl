@@ -2,7 +2,7 @@ $fn=60;
 
 difference(){
 union(){
-cylinder(d=28,h=16);
+cylinder(d=29,h=16);
 translate([-10,9,0]) cube(size=[20,68,7]);
 translate([-3.5,-21.5,0]) cube(size=[7,8,16]);
 translate([-10,78,8])cube(size=[20,7,37]);
