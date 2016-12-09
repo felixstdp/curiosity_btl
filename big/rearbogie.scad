@@ -1,24 +1,25 @@
 $fn=60;
 
-translate([15,0,0])bar(diam=12,length=100);
+translate([10,0,0])bar(diam=12,length=65);
+translate([102.5,-6.5,0])servo_basis();
 
+rotate([0,15,0]){
 rotate([0,135,0])
-translate([15,0,0])bar(diam=12,length=50);
-
-translate([142.5,-7,0])servo_basis();
-
+translate([10,0,0])bar(diam=12,length=55);
 translate([-55,6,-55])rotate([90,0,0])
 motor_grip();
+}
 
 rotate([90,0,0])
 difference(){
-cylinder(d=32,h=12,center=true);
-cylinder(d=10,h=14,center=true);
+cylinder(d=24,h=12,center=true);
+cylinder(d=6,h=14,center=true);
 }
 
 module servo_basis(){
 difference(){
-cube([55,25,5],center=true);
+translate([-1.5,0,0])    
+cube([58,25,5],center=true);
 cube([41.3,20.3,8],center=true);
 translate([48.5/2,10/2,0])
 cylinder(d=3.2,h=8,center=true);
