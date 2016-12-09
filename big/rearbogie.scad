@@ -46,5 +46,5 @@ translate ([-5,-18,12])rotate([0,90,0])cylinder(d=3.2,h=100);
 
 module bar(diam,length){
 rotate([360/16,0,0])rotate([0,90,0])
-    cylinder(d=diam,h=length,$fn=8);
+    cylinder(d=diam/.9239,h=length,$fn=8);
 }
