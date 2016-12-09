@@ -5,7 +5,7 @@ translate([15,0,0])bar(diam=12,length=100);
 rotate([0,135,0])
 translate([15,0,0])bar(diam=12,length=50);
 
-translate([142.5,0,0])servo_basis();
+translate([142.5,-7,0])servo_basis();
 
 translate([-55,6,-55])rotate([90,0,0])
 motor_grip();
