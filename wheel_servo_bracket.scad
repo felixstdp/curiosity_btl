@@ -9,25 +9,23 @@ rotate([-90,0,0]) bracket();
 module bracket(){
 $fn=60;
 difference(){
-translate([28,-26,4])rotate([0,90,0])
+translate([32,-26,4])rotate([0,90,0])
 cylinder(d=24,h=6);
-translate([26,-26,4])rotate([0,90,0])
+translate([30,-26,4])rotate([0,90,0])
 cylinder(d=7.5,h=9);
 }
 
-translate([-3,-7,0])cube([6,10,8]);
-translate([28,-22,0])cube([6,25,8]);
-cube([31,6,8]);
+translate([-4,-7,0])cube([8,10,8]);
+translate([32,-22,0])cube([6,25,8]);
+translate([-1,0,0])cube([36,6,8]);
 
-translate([0,3,0])rotate([0,0,-90])
+translate([-1,3,0])rotate([0,0,-90])
 cylinder(d=6,h=8);
-translate([31,3,0])rotate([0,0,-90])
+translate([35,3,0])rotate([0,0,-90])
 cylinder(d=6,h=8);
 
 }
 //translate([-18,-20,-1])cube([10,10,20]);
-
-
 
 module clamp(){
 difference(){
