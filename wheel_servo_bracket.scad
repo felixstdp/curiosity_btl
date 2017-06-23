@@ -1,39 +1,33 @@
-translate([0,8,3])clamp();
+translate([0,4,3])clamp();
 
-translate([10,-10,-6])cylinder(d=18,h=0.5);
-translate([-10,-10,-6])cylinder(d=18,h=0.5);
+// apoyos para imprimir sin despegarse
+//translate([10,-10,-6])cylinder(d=18,h=0.5);
+//translate([-10,-10,-6])cylinder(d=18,h=0.5);
 
-difference(){
-rotate([-90,0,0])translate([-4,0,0])bracket();
-translate([-0.75,0,6])cube([1.5,22,22]);
-}    
+rotate([-90,0,0]) bracket();
 
 module bracket(){
 $fn=60;
-rotate([0,90,0])
 difference(){
-union(){
-cube([27,6,8]);
-rotate([0,0,225])translate([0,-6,0])cube([11,6,8]);
-difference(){
-cylinder(r=6,h=8);
-translate([-10,-20,-1])cube([24,20,20]);
-}
-translate([27,3,0])rotate([0,0,-90])
-cylinder(d=6,h=8);
-difference(){
-union(){
-translate([24,-26,0])cube([6,29,8]);
-translate([24,-26,4])rotate([0,90,0])
+translate([28,-26,4])rotate([0,90,0])
 cylinder(d=24,h=6);
-}
-translate([21,-26,4])rotate([0,90,0])
+translate([26,-26,4])rotate([0,90,0])
 cylinder(d=7.5,h=9);
 }
+
+translate([-3,-7,0])cube([6,10,8]);
+translate([28,-22,0])cube([6,25,8]);
+cube([31,6,8]);
+
+translate([0,3,0])rotate([0,0,-90])
+cylinder(d=6,h=8);
+translate([31,3,0])rotate([0,0,-90])
+cylinder(d=6,h=8);
+
 }
 //translate([-18,-20,-1])cube([10,10,20]);
-}
-}
+
+
 
 module clamp(){
 difference(){
