@@ -16,11 +16,15 @@ cylinder(d=6,h=6);
 translate([21,0,2])rotate([0,60,0])
 cube([47,6,8]);
 difference(){
-translate([50,0,-40])rotate([-90,0,0])
-cylinder(d=15,h=6);
-translate([50,-1,-40])rotate([-90,0,0])
-cylinder(d=8,h=8);
+translate([50,-2,-40])rotate([-90,0,0])
+cylinder(d=15,h=8);
+translate([50,-3,-40])rotate([-90,0,0])
+cylinder(d=8,h=10);
 }
+translate([46,0,-45])
+rotate([-20,0,0])
+rotate([0,90,0])
+cube([47,6,8]);
 
 module clamp(){
 difference(){
