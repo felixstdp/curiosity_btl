@@ -1,9 +1,6 @@
+translate([0,0,6])rotate([-90,0,0])
+{
 rotate([90,0,0])translate([0,4,3])clamp();
-
-// apoyos para imprimir sin despegarse
-//translate([10,-10,-6])cylinder(d=18,h=0.5);
-//translate([-10,-10,-6])cylinder(d=18,h=0.5);
-
 
 $fn=60;
 
@@ -29,7 +26,7 @@ rotate([0,90,0])
     translate([63,3,0])rotate([0,0,0])
     servo_bracket();
 }
-
+}
 module clamp(){
 difference(){
 translate([-7,-10,0])
