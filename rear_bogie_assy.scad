@@ -10,20 +10,19 @@ cylinder(d=6,h=8);
 translate([-1,0,0])cube([26,6,8]);
 translate([25,6,5])rotate([90,0,0])
 cylinder(d=6,h=6);
-translate([21,0,2])rotate([0,60,0])
-cube([47,6,8]);
+translate([22.5,0,3.3])rotate([0,60,0])
+cube([47,6,6]);
 difference(){
-translate([50,-2,-40])rotate([-90,0,0])
-cylinder(d=15,h=8);
-translate([50,-3,-40])rotate([-90,0,0])
-cylinder(d=8,h=10);
+translate([50,-4,-40])rotate([-90,0,0])
+cylinder(d=15,h=10);
+translate([50,-5,-40])rotate([-90,0,0])
+cylinder(d=8,h=12);
 }
-translate([46,0,-45])
-rotate([-20,0,0])
+translate([47,0,-45])
 rotate([0,90,0])
 {
-    cube([47,6,8]);
-    translate([63,3,0])rotate([0,0,0])
+    cube([47,6,6]);
+    translate([63,-1.5,0])rotate([0,0,0])
     servo_bracket();
 }
 }
