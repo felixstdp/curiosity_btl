@@ -1,6 +1,6 @@
 $fn=30;
 
-translate([0,-96.5,16.5])rotate([0,-90,-20])
+translate([0.85,-96.5,16.5])rotate([0,-90,-15])
 servo_bracket();
 
 translate([-3,-88.5,0])cube([6,84.5,6]);
@@ -19,7 +19,7 @@ cylinder(d=15,h=10);
 translate([0,0,-1])cylinder(d=8,h=12);
 }
 
-rotate([0,0,75]) translate([0,6,0])
+rotate([0,0,70]) translate([0,6,0])
 linear_extrude(height=6)
 polygon([[-4,0],[4,0],[3,20],[-3,20]]);
 
