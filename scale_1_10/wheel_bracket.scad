@@ -1,8 +1,9 @@
-translate([0,4,3])clamp();
+translate([0,4,3])rotate([0,0,90])
+clamp();
 
 // apoyos para imprimir sin despegarse
-//translate([10,-10,-6])cylinder(d=18,h=0.5);
-//translate([-10,-10,-6])cylinder(d=18,h=0.5);
+translate([10,14,-6])cylinder(d=18,h=0.5);
+translate([10,-6,-6])cylinder(d=18,h=0.5);
 
 rotate([-90,0,0]) bracket();
 
