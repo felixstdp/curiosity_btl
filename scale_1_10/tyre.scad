@@ -1,3 +1,5 @@
+// print in filaflex or similar
+
 $fn=90;
 
 h=38/8;
