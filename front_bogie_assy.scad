@@ -20,7 +20,7 @@ translate([0,0,-1])cylinder(d=8,h=12);
 }
 
 rotate([0,0,70]) translate([0,6,0])
-linear_extrude(height=6)
+linear_extrude(height=4)
 polygon([[-4,0],[4,0],[3,20],[-3,20]]);
 
 module servo_bracket(){
