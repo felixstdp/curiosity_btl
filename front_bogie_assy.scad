@@ -1,6 +1,6 @@
 $fn=30;
 
-translate([0.85,-96.5,16.5])rotate([0,-90,-15])
+translate([0.80,-96.71,16.5])rotate([0,-90,-15])
 servo_bracket();
 
 translate([-3,-88.5,0])cube([6,84.5,6]);
