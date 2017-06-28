@@ -30,17 +30,18 @@ cylinder(d=10,h=8);
 
 module servo_basis(){
 difference(){
-translate([-1.5,0,0])
-cube([58,25,5],center=true);
-cube([41.3,20.3,8],center=true);
+translate([-1.5,12.5,0])rotate([90,0,0])
+linear_extrude(height=25)
+polygon([[-29,-2.5],[-29,8.5],[29,2.5],[29,-2.5]]);
+cube([41.3,20.3,18],center=true);
 translate([48.5/2,10/2,0])
-cylinder(d=3.2,h=8,center=true);
+cylinder(d=3.2,h=18,center=true);
 translate([-48.5/2,10/2,0])
-cylinder(d=3.2,h=8,center=true);
+cylinder(d=3.2,h=18,center=true);
 translate([-48.5/2,-10/2,0])
-cylinder(d=3.2,h=8,center=true);
+cylinder(d=3.2,h=18,center=true);
 translate([48.5/2,-10/2,0])
-cylinder(d=3.2,h=8,center=true);
+cylinder(d=3.2,h=18,center=true);
 }
 }
 
