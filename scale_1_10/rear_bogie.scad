@@ -1,28 +1,29 @@
-translate([0,0,6])rotate([-90,-90,180])
+
+rotate([-90,0,0])
 {
-rotate([90,90,0])translate([-4,0,3])clamp();
+rotate([90,90,0])translate([-4,-5,3])clamp();
 
 $fn=60;
 
-translate([-4,-7,0])cube([8,10,8]);
-translate([-1,3,0])rotate([0,0,-90])
+translate([-9,-7,0])cube([8,10,8]);
+translate([-6,3,0])rotate([0,0,-90])
 cylinder(d=6,h=8);
-translate([-1,0,0])cube([26,6,8]);
+translate([-6,-2,0])cube([31,8,8]);
 translate([25,6,5])rotate([90,0,0])
-cylinder(d=6,h=6);
-translate([22.5,0,3.3])rotate([0,60,0])
-cube([47,6,6]);
+cylinder(d=6,h=8);
+translate([20.8,-2,2.3])rotate([0,60,0])
+cube([47,8,8]);
 difference(){
 translate([50,-4,-40])rotate([-90,0,0])
 cylinder(d=15,h=10);
 translate([50,-5,-40])rotate([-90,0,0])
-cylinder(d=8,h=12);
+cylinder(d=5.5,h=12);
 }
 translate([47,0,-45])
 rotate([0,90,0])
 {
-    cube([47,6,6]);
-    translate([63,-2.5,0])rotate([0,0,0])
+    translate([0,-2,0])cube([47,8,8]);
+    translate([63,-3.5,0])rotate([0,0,0])
     servo_bracket();
 }
 }
@@ -53,9 +54,9 @@ cube(size=[25,25,25],center=true);
 module servo_bracket(){
 difference(){
 union(){
-translate([1,0,1.25])cube([35,17,2.5],center=true);
-translate([0,8.5,2])
-rotate([90,0,0])linear_extrude(height=17)
+translate([1,0,2])cube([35,19,4],center=true);
+translate([0,9.5,2])
+rotate([90,0,0])linear_extrude(height=19)
 polygon([[-16.5,0],[16.5,0],[-16.5,8]]);
 translate([13.75,0,0])cylinder(d=8,h=2,$fn=60);
 }
