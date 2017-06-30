@@ -1,4 +1,4 @@
-// to be printed in filaflex or similar
+// to be printed in filaflex or equivalent
 
 $fn=90;
 
