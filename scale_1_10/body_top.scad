@@ -20,3 +20,9 @@ translate([0,12,7])
 cylinder(d=5,h=20,center=true);
 
 }
+
+translate([0,0,5])
+difference(){
+cube([117,137,10],center=true);
+cube([114,134,22],center=true);
+}  
