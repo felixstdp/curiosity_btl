@@ -15,4 +15,5 @@ cylinder(d=16,h=6);
 }
 translate([0,0,-1])cylinder(d=3.35,h=21);
 }
-translate([1.15,-2,0])cube(size=[2,4,6]);
+rotate([0,0,30])translate([1.15,-2,0])
+cube(size=[2,4,6]);
