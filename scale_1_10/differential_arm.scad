@@ -2,7 +2,7 @@ $fn=30;
 
 difference(){
 
-linear_extrude(height=4)
+linear_extrude(height=5)
 polygon(
 [[-63.5,3],
 [0,8],
