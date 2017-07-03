@@ -20,9 +20,19 @@ cylinder(d=15,h=10);
 translate([0,0,-1])cylinder(d=5.5,h=12);
 }
 
-rotate([0,0,70]) translate([0,6,0])
+rotate([0,0,75]) translate([0,6,0])
 linear_extrude(height=4)
-polygon([[-4,0],[4,0],[3,20],[-3,20]]);
+polygon([[-4,0],[4,0],[2.5,17.5],[-2.5,17.5]]);
+
+rotate([0,0,75]) translate([-2.5,19,0])
+cube([5,6,1.5]);
+
+translate([0,0,3])rotate([0,0,75]) 
+translate([0,25,0])rotate([0,90,0])
+difference(){
+cylinder(d=6,h=5,center=true);
+cylinder(d=3,h=7,center=true);
+}
 
 module servo_bracket(){
 difference(){
