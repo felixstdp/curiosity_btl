@@ -1,10 +1,10 @@
 $fn=30;
 
-translate([4,-77.5,0])rotate([0,-90,-15])
+translate([4,-82.5,0])rotate([0,-90,-15])
 translate([16.5,-9.5,0])
 servo_bracket();
 
-translate([-4,-77.5,0])cube([8,73.5,8]);
+translate([-4,-82.5,0])cube([8,78.5,8]);
 
 difference(){
 cylinder(d=15,h=12.5);
@@ -46,8 +46,6 @@ translate([13.75,0,0])cylinder(d=8,h=2,$fn=60);
 cube([23.4,12.4,50],center=true);
 translate([13.75,0,-1])cylinder(d=2.2,h=5,$fn=30);
 translate([-13.75,0,-1])cylinder(d=2.2,h=50,$fn=30);
-translate([13.75,0,2.5])cylinder(d=3.7,h=5,$fn=30);
-translate([-13.75,0,2])cylinder(d=3.7,h=50,$fn=30);
 translate([10,0,0])cylinder(d=6,h=12,$fn=60);
 }
 }
