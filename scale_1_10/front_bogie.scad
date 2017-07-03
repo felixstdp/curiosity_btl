@@ -21,7 +21,7 @@ translate([0,0,-1])cylinder(d=5.5,h=12);
 }
 
 rotate([0,0,75]) translate([0,6,0])
-linear_extrude(height=4)
+linear_extrude(height=5)
 polygon([[-4,0],[4,0],[2.5,17.5],[-2.5,17.5]]);
 
 rotate([0,0,75]) translate([-2.5,19,0])
