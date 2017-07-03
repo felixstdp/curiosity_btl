@@ -21,16 +21,16 @@ translate([0,0,-1])cylinder(d=5.5,h=12);
 }
 
 rotate([0,0,75]) translate([0,6,0])
-linear_extrude(height=5)
-polygon([[-4,0],[4,0],[2.5,17.5],[-2.5,17.5]]);
+linear_extrude(height=6)
+polygon([[-4,0],[4,0],[3,17.5],[-3,17.5]]);
 
-rotate([0,0,75]) translate([-2.5,19,0])
-cube([5,6,1.5]);
+rotate([0,0,75]) translate([-3,19,0])
+cube([6,6,1.5]);
 
-translate([0,0,3])rotate([0,0,75]) 
+translate([-1,0.25,5])rotate([0,0,75]) 
 translate([0,25,0])rotate([0,90,0])
 difference(){
-cylinder(d=6,h=5,center=true);
+cylinder(d=10,h=6,center=true);
 cylinder(d=3,h=7,center=true);
 }
 
