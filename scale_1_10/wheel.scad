@@ -9,9 +9,9 @@ union()
 for(i=[0:60:300])
 {
     rotate([0,0,i])translate([3,-0.75,0])
-    cube(size=[20,1.5,6]);
+    cube(size=[20,1.5,10]);
 } 
-cylinder(d=16,h=6);
+cylinder(d=16,h=10);
 }
 translate([0,0,-1])cylinder(d=3.35,h=21);
 }
