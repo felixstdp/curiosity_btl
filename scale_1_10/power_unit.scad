@@ -20,4 +20,4 @@ difference(){
 }
 
 translate([0,0,0.5])
-cube([30,40,1],center=true);
+cube([30,39.7,1],center=true);
