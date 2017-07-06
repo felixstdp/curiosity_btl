@@ -1,0 +1,11 @@
+difference(){
+    cube([40,21,40],center=true);
+    cube([38,19,42],center=true);
+    rotate([90,0,0])
+    cylinder(d=6.5,h=30,$fn=30);
+    translate([0,10,20])
+    cube([5,20,20],center=true);
+    translate([0,0,10])
+    rotate([-90,0,0])
+    cylinder(d=5,h=30,$fn=30);
+}

@@ -1,5 +1,5 @@
 difference(){
-cylinder(d=15,h=30,$fn=30);
+cylinder(d=15.4,h=30,$fn=30);
 translate([0,0,45])
 rotate([0,30,0])
 cube([50,50,40],center=true);

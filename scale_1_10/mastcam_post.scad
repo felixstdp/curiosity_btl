@@ -1,0 +1,10 @@
+$fn=30;
+difference(){
+union(){
+    cylinder(r1=7,r2=3.5,h=10);
+    cylinder(d=25,h=0.25);
+}
+    cylinder(d=2,h=5);
+}
+translate([0,0,10])cylinder(d=7,h=60);
+translate([0,0,55])cylinder(r1=3.5,r2=7,h=10);
