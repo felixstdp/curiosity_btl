@@ -60,10 +60,8 @@ polygon([[-16.5,0],[16.5,0],[-16.5,8]]);
 translate([13.75,0,0])cylinder(d=8,h=2,$fn=60);
 }
 cube([23.4,12.4,50],center=true);
-translate([13.75,0,-1])cylinder(d=2.2,h=5,$fn=30);
+translate([13.75,0,-1])cylinder(d=2.2,h=6,$fn=30);
 translate([-13.75,0,-1])cylinder(d=2.2,h=50,$fn=30);
-translate([13.75,0,2.5])cylinder(d=3.7,h=5,$fn=30);
-translate([-13.75,0,2])cylinder(d=3.7,h=50,$fn=30);
-translate([10,0,0])cylinder(d=6,h=12,$fn=60);
+translate([7,-3,-1])cube([6,6,12]);
 }
 }
