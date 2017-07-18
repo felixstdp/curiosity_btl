@@ -18,7 +18,6 @@ translate([0,-20,19])rotate([0,90,0])
 cylinder(d=5,h=122,center=true);
 translate([0,12,7])
 cylinder(d=5,h=20,center=true);
-
 }
 
 translate([0,0,5])
