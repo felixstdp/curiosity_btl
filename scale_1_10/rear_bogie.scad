@@ -53,14 +53,14 @@ cube(size=[25,25,25],center=true);
 module servo_bracket(){
 difference(){
 union(){
-translate([1,0,2])cube([35,19,4],center=true);
+translate([1,0,3])cube([38,19,6],center=true);
 translate([0,9.5,2])
 rotate([90,0,0])linear_extrude(height=19)
-polygon([[-16.5,0],[16.5,0],[-16.5,8]]);
+polygon([[-18,0],[20,4],[-18,8]]);
 translate([13.75,0,0])cylinder(d=8,h=2,$fn=60);
 }
 cube([23.4,12.4,50],center=true);
-translate([13.75,0,-1])cylinder(d=2.2,h=6,$fn=30);
+translate([13.75,0,-1])cylinder(d=2.2,h=60,$fn=30);
 translate([-13.75,0,-1])cylinder(d=2.2,h=50,$fn=30);
 translate([7,-3,-1])cube([6,6,12]);
 }
