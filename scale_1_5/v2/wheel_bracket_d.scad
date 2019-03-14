@@ -16,15 +16,16 @@ translate([-3.5,-20,0]) cube(size=[7,7,16]);
 }
 translate([0,0,-1]) cylinder(d=25,h=22);
 translate([-.5,-25,-1]) cube(size=[1,20,22]);
+
 translate ([-5,-16,4])rotate([0,90,0])
-cylinder(d=3.2,h=100);
+cylinder(d=2.7,h=100);
 translate ([3.5,-16,4])rotate([0,90,0])
 cylinder(d=5.5,h=100);
 translate ([-13.5,-16,4])rotate([0,90,0])
 cylinder(d=7,h=10,$fn=6);
 
 translate ([-5,-16,12])rotate([0,90,0])
-cylinder(d=3.2,h=100);
+cylinder(d=2.7,h=100);
 translate ([3.5,-16,12])rotate([0,90,0])
 cylinder(d=5.5,h=100);
 translate ([-13.5,-16,12])rotate([0,90,0])
