@@ -6,7 +6,7 @@ cube([43,10.4,10.4],center=true);
 }
 
 difference(){
-translate([0,0,-4])
+translate([0,0,-3])
 rotate([0,17,0])
 translate([-28,0,0])
 difference(){
