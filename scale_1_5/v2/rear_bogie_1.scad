@@ -8,7 +8,7 @@ difference(){
 }
 
 difference(){
-rotate([0,0,-22])
+rotate([0,0,-17])
 translate([0,30,12])
 rotate([90,0,0])
 difference(){
