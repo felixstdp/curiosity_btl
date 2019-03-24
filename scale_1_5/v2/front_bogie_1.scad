@@ -16,7 +16,7 @@ difference(){
 cube([17,17,42],center=true);
 cube([10.4,10.4,42],center=true);
 }
-translate([0,0,5])cylinder(d=35,h=16,$fn=60);
+translate([0,0,5])cylinder(d=35.6,h=16,$fn=60);
 translate([0,0,25])cube([100,100,10],center=true);
 }
 
