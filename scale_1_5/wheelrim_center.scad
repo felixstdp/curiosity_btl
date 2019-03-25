@@ -47,5 +47,5 @@ translate([0,0,17])
 cylinder(d=14.4,h=24,$fn=6);
 translate([0,0,-1])
 cylinder(d=3.2,h=21);
-cylinder(d=7,h=15);
+cylinder(d=8,h=15);
 }
