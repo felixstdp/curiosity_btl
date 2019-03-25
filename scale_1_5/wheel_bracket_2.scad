@@ -1,13 +1,13 @@
-$fn=60;
+$fn=20;
 
 difference(){
 union(){
 
-cylinder(d=18,h=6);
-cylinder(d=15,h=16);
+cylinder(d=18,h=6,$fn=60);
+cylinder(d=15,h=16,$fn=60);
 
 minkowski(){
-cylinder(d=33,h=8,center=true);
+cylinder(d=33,h=8,$fn=60,center=true);
 sphere(d=2);
 }
 
@@ -21,7 +21,7 @@ translate([35,0,-5])
 difference(){
 minkowski(){
 rotate([90,0,0])
-cylinder(d=16,h=16,center=true);
+cylinder(d=16,h=16,$fn=60,center=true);
 sphere(d=4);
 }
 translate([-5,0,-15])
