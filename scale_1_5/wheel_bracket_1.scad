@@ -1,8 +1,8 @@
-$fn=60;
+$fn=20;
 
 difference(){
 union(){
-cylinder(d=32,h=16);
+cylinder(d=32,h=16,$fn=60);
 translate([-8,9,2])
 minkowski(){
 sphere(d=4);
@@ -14,7 +14,7 @@ linear_extrude(height=16)polygon([[0,0],[20,0],[20,20]]);
 }
 translate([-3.5,-20,0]) cube(size=[7,7,16]);
 }
-translate([0,0,-1]) cylinder(d=25,h=22);
+translate([0,0,-1]) cylinder(d=25,h=22,$fn=60);
 translate([-.5,-25,-1]) cube(size=[1,20,22]);
 
 translate ([-5,-16,4])rotate([0,90,0])
