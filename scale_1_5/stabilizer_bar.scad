@@ -1,7 +1,10 @@
 $fn=40;
 difference(){
 hull(){
-cylinder(d=30,h=10,$fn=60);
+minkowski(){
+translate([0,0,1])cylinder(d=28,h=8,$fn=120);
+    sphere(1);
+}
 translate([0,0,5])rotate([0,90,0])
     cylinder(d=10,h=60,center=true);
 }
