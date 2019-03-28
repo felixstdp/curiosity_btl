@@ -42,9 +42,9 @@ for(i=[0:60:330])
     cube(size=[3,20,10]);
 }
 difference(){
-cylinder(d=18,h=10);
+cylinder(d=18.4,h=10);
 translate([0,0,2])
-cylinder(d=14,h=9,$fn=6);
+cylinder(d=14.4,h=9,$fn=6);
 translate([0,0,-1])
 cylinder(d=3.2,h=6);
 }
