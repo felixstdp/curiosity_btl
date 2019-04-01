@@ -17,3 +17,7 @@ scale_1_5 folder for 1:5 scale model
 https://bricolabs.cc/wiki/proyectos/curiosity_btl
 
 ![alt text](https://github.com/fstdp/curiosity_btl/blob/master/randall_munroe_curiosity.jpg)
+
+![alt text](https://github.com/felixstdp/curiosity_btl/blob/master/curiosity_btl_1_10.jpg)
+
+![alt text](https://github.com/felixstdp/curiosity_btl/blob/master/curiosity_btl_1_5.jpg)
