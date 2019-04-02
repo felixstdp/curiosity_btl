@@ -8,9 +8,9 @@ translate([0,20,0])cylinder(d=5,h=10,$fn=20);
 translate([10,0,5])rotate([90,0,0])
 cylinder(d=3,h=60,$fn=20,center=true);
 translate([10,15,5])rotate([-90,0,0])
-cylinder(d=6,h=10,$fn=20);
+cylinder(d=6,h=20,$fn=20);
 translate([-10,0,5])rotate([90,0,0])
 cylinder(d=3,h=60,$fn=20,center=true);
 translate([-10,15,5])rotate([-90,0,0])
-cylinder(d=6,h=10,$fn=20);
+cylinder(d=6,h=20,$fn=20);
 }
