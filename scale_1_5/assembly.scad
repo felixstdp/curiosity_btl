@@ -1,4 +1,4 @@
-translate([-160,-55,-35])rotate([180,0,90])
+translate([-170,-60,-35])rotate([180,0,90])
 frontbogie1();
 rotate([90,0,0])frontbogie2();
 translate([130,0,-45])rotate([-90,0,180])
@@ -10,20 +10,16 @@ translate([130,-21,-45])rotate([90,180,0])
 rearbogie2();
 translate([52,-19,-132])rotate([90,0,0])rearbogie3();
 
-translate([0,300,0])scale([1,-1,1])
-{
-translate([-160,-55,-35])rotate([180,0,90])
-frontbogie1();
-rotate([90,0,0])frontbogie2();
-translate([130,0,-45])rotate([-90,0,180])
-frontbogie3();
+translate([-170,-15,-148])rotate([90,0,0])
+wheelbracket1();
+translate([-170,-60,-70])rotate([0,0,90])
+wheelbracket2();
 
-translate([260,-58,-33])rotate([180,0,90])
-rearbogie1();
-translate([130,-21,-45])rotate([90,180,0])
-rearbogie2();
-translate([52,-19,-132])rotate([90,0,0])rearbogie3();
-}
+translate([260,-12,-148])rotate([90,0,0])
+wheelbracket1();
+translate([260,-57,-70])rotate([0,0,90])
+wheelbracket2();
+
 
 module frontbogie1(){
 
@@ -37,8 +33,8 @@ difference(){
 }
 
 difference(){
-rotate([0,0,-22])
 rotate([-14,0,0])
+rotate([0,0,-22])
 translate([0,30,16])
 rotate([90,0,0])
 difference(){
@@ -230,4 +226,100 @@ translate([0,42,1.5])rotate([0,0,30])
 cube([43,10.4,10.4],center=true);
 }
 }
-    
+
+module wheelbracket1(){
+   $fn=20;
+
+difference(){
+union(){
+cylinder(d=32,h=16,$fn=60);
+translate([-8,9,2])
+minkowski(){
+sphere(d=4);
+union(){    
+cube(size=[16,66,6]);
+translate([0,44,0])rotate([90,0,90])
+linear_extrude(height=16)polygon([[0,0],[20,0],[20,20]]);
+}    
+}
+translate([-3.5,-20,0]) cube(size=[7,7,16]);
+}
+translate([0,0,-1]) cylinder(d=25,h=22,$fn=60);
+translate([-.5,-25,-1]) cube(size=[1,20,22]);
+
+translate ([-5,-16,4])rotate([0,90,0])
+cylinder(d=2.7,h=100);
+translate ([3.5,-16,4])rotate([0,90,0])
+cylinder(d=5.5,h=100);
+translate ([-13.5,-16,4])rotate([0,90,0])
+cylinder(d=7,h=10,$fn=6);
+
+translate ([-5,-16,12])rotate([0,90,0])
+cylinder(d=2.7,h=100);
+translate ([3.5,-16,12])rotate([0,90,0])
+cylinder(d=5.5,h=100);
+translate ([-13.5,-16,12])rotate([0,90,0])
+cylinder(d=7,h=10,$fn=6);
+
+translate([5,58,5])rotate([-90,0,0])
+cylinder(d=3,h=100);
+translate([-5,58,5])rotate([-90,0,0])
+cylinder(d=3,h=100);
+
+translate([0,60,15])rotate([-90,0,0])
+cylinder(d=3,h=100);
+translate([0,56,15])rotate([-90,0,0])
+cylinder(d=6.5,h=10,$fn=6);
+
+translate([0,90,0])cube([60,40,60],center=true);
+}
+}
+
+module wheelbracket2(){
+$fn=20;
+
+difference(){
+union(){
+
+cylinder(d=18,h=6,$fn=60);
+cylinder(d=15,h=16,$fn=60);
+
+minkowski(){
+cylinder(d=33,h=8,$fn=60,center=true);
+sphere(d=2);
+}
+
+translate([20,0,0])
+minkowski(){
+cube([31,16,6],center=true);
+sphere(d=4);
+}
+
+translate([35,0,-5])
+difference(){
+minkowski(){
+rotate([90,0,0])
+cylinder(d=16,h=16,$fn=60,center=true);
+sphere(d=4);
+}
+translate([-5,0,-15])
+cube([30,30,30],center=true);
+}
+
+}
+translate([30,0,0])
+cylinder(d=3.2,h=100,center=true);
+translate([40,-5,0])
+cylinder(d=3.2,h=100,center=true);
+translate([40,5,0])
+cylinder(d=3.2,h=100,center=true);
+translate([30,0,6.5])
+cylinder(d=6,h=10,center=true);
+translate([40,-5,6.5])
+cylinder(d=6,h=10,center=true);
+translate([40,5,6.5])
+cylinder(d=6,h=10,center=true);
+
+cylinder(d=3.2,h=50,center=true);
+}
+}
