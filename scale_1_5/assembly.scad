@@ -33,8 +33,8 @@ difference(){
 }
 
 difference(){
-rotate([-14,0,0])
 rotate([0,0,-22])
+rotate([-14,0,0])
 translate([0,30,16])
 rotate([90,0,0])
 difference(){
