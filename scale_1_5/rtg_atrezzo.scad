@@ -1,6 +1,6 @@
 scale([2,2,2])
 {
-$fn=30;
+$fn=60;
 
 difference(){
     cylinder(d=18,h=60);
