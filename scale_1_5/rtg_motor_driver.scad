@@ -13,4 +13,9 @@ for(i=[0:120:240]){
 }
 }
 }
+
+difference(){
 translate([0,-25,1])cube([50,15,2],center=true);
+translate([15,-25,0]) cylinder(d=3.2,h=2);
+translate([-15,-25,0]) cylinder(d=3.2,h=2);
+}
