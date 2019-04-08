@@ -28,7 +28,7 @@ cylinder(d=3.2,h=25,$fn=20,center=true);
 translate([35,15,0])rotate([-60,0,0])
 cylinder(d=3.2,h=25,$fn=20,center=true);
 translate([15,15,0])rotate([-60,0,0])
-translate([0,0,-4])cylinder(d=6,h=8,$fn=6);
+translate([0,0,-4])cylinder(d=7.5,h=8,$fn=6);
 translate([35,15,0])rotate([-60,0,0])
-translate([0,0,-4])cylinder(d=6,h=8,$fn=6);
+translate([0,0,-4])cylinder(d=7.5,h=8,$fn=6);
 }
