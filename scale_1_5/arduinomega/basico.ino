@@ -1,3 +1,26 @@
+#include <Servo.h>
+
+#define s1center 90 // posiciones de centrado de los servos
+#define s2center 90
+#define s3center 90
+#define s4center 90
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+
+servo1.attach(8);
+servo2.attach(9);
+servo3.attach(10);
+servo4.attach(11);
+
+servo1.write(s1center);
+servo2.write(s2center);
+servo3.write(s3center);
+servo4.write(s4center);
+
+// pines de control de motores con driver L298
 void setup() {
   for (i=[2:7]){
     pinMode(i,OUTPUT);
@@ -9,7 +32,6 @@ for (i=[30:42]){
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
 }
 
