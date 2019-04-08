@@ -6,9 +6,21 @@ linear_extrude(50)
 polygon([[0,0],[15,0],[0,15]]);
 }
     translate([0,0,5])cube([50,10,10]);
-    translate([5,5,0])cylinder(d=3.2,h=10,$fn=15);
-    translate([45,5,0])cylinder(d=3.2,h=20,$fn=15);
-    translate([25,5,10])
-    rotate([-90,0,0])
-    cylinder(d=3.2,h=10,$fn=15);
+    translate([25,5,0])cylinder(d=3.2,h=10,$fn=15);
+    translate([8,0,10])rotate([-90,0,0])
+    cylinder(d=3.2,h=100,$fn=15,center=true);
+    translate([8,15,10])rotate([-90,0,0])
+    cylinder(d=9,h=100,$fn=15);
+    translate([42,0,10])rotate([-90,0,0])
+    cylinder(d=3.2,h=100,$fn=15,center=true);
+    translate([42,15,10])rotate([-90,0,0])
+    cylinder(d=9,h=100,$fn=15);
+translate([15,15,0])rotate([-45,0,0])
+cylinder(d=3.2,h=25,$fn=20,center=true);
+translate([35,15,0])rotate([-45,0,0])
+cylinder(d=3.2,h=25,$fn=20,center=true);
+translate([15,15,0])rotate([-45,0,0])
+cylinder(d=6,h=5,$fn=6,center=true);
+translate([35,15,0])rotate([-45,0,0])
+cylinder(d=6,h=5,$fn=6,center=true);
 }
