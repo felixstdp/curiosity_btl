@@ -10,24 +10,24 @@ Servo servo2;
 Servo servo3;
 Servo servo4;
 
-servo1.attach(8);
-servo2.attach(9);
-servo3.attach(10);
-servo4.attach(11);
-
-servo1.write(s1center);
-servo2.write(s2center);
-servo3.write(s3center);
-servo4.write(s4center);
-
-// pines de control de motores con driver L298
 void setup() {
+
   for (i=[2:7]){
     pinMode(i,OUTPUT); //pines PWM para velocidad
   }
-for (i=[30:42]){
+  for (i=[30:42]){
     pinMode(i,OUTPUT); //pines digitales para control de dirección
   }
+  
+  servo1.attach(8); //pines para servos
+  servo2.attach(9);
+  servo3.attach(10);
+  servo4.attach(11);
+
+  servo1.write(s1center); //arranque en posicion central
+  servo2.write(s2center);
+  servo3.write(s3center);
+  servo4.write(s4center);
 
 }
 
