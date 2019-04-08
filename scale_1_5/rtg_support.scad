@@ -6,6 +6,7 @@ linear_extrude(55)
 polygon([[0,0],[15,0],[0,15]]);
 }
 translate([-2.5,0,5])cube([55,10,10]);
+translate([-2.5,27,0])cube([55,15,15]);
 
 translate([25,5,0])cylinder(d=3.2,h=10,$fn=15);
 
@@ -31,4 +32,3 @@ cylinder(d=6,h=5,$fn=6,center=true);
 translate([35,15,0])rotate([-45,0,0])
 cylinder(d=6,h=5,$fn=6,center=true);
 }
-
