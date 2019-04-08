@@ -7,7 +7,7 @@ union(){
     translate([0,0,3])
     cylinder(d=95,h=12,$fn=6);
     cylinder(d=70,h=12,$fn=60);
-for(i=[0:120:300]){
+for(i=[60:120:300]){
  rotate([0,0,i]){
     translate([-20,0,7])rotate([90,0,0])
     cylinder(d=3,h=100);
