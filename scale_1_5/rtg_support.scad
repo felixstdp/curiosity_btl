@@ -3,7 +3,7 @@ union(){
     translate([-2.5,0,0])cube([55,15,15]);
     translate([52.5,15,0])rotate([90,-90,-90])
 linear_extrude(55)
-polygon([[0,0],[15,0],[0,15]]);
+polygon([[0,0],[15,0],[0,13]]);
 }
 translate([-2.5,0,5])cube([55,10,10]);
 translate([-2.5,27,0])cube([55,15,15]);
