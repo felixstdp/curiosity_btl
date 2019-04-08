@@ -23,10 +23,10 @@ servo4.write(s4center);
 // pines de control de motores con driver L298
 void setup() {
   for (i=[2:7]){
-    pinMode(i,OUTPUT);
+    pinMode(i,OUTPUT); //pines PWM para velocidad
   }
 for (i=[30:42]){
-    pinMode(i,OUTPUT);
+    pinMode(i,OUTPUT); //pines digitales para control de dirección
   }
 
 }
@@ -42,6 +42,6 @@ void setmotor(int m, int v){
   v = contrain (v,-255,255);
   digitalWrite(dir1,v>=0);
   digitalWrite(dir2,v<0);
-  analogWrite(pwm,abs(a))
+  analogWrite(pwm,abs(v))
   }
 }
