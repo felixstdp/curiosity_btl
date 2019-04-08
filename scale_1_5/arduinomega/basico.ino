@@ -42,6 +42,6 @@ void setmotor(int m, int v){
   v = contrain (v,-255,255);
   digitalWrite(dir1,v>=0);
   digitalWrite(dir2,v<0);
-  analogWrite(pwm,abs(v))
+  analogWrite(pwm,abs(v));
   }
 }
