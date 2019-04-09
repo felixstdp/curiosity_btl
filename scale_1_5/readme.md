@@ -10,3 +10,5 @@ BOM
 - Plancha de Dibond de 3mm de grosor y 240x280mm. Opcional marco de perfilería por debajo.
 
 Las piezas con nombre 'atrezzo' no son funcionales, sólo decorativas para parecerse más al Curiosity MLS.
+
+La impresión de todas las piezas necesita alrededor de 1kg de plástico y 60-70h.
