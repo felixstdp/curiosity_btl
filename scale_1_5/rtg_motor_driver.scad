@@ -30,6 +30,6 @@ difference(){
 translate([0,-12,1.5])cube([72,24,3],center=true);
 translate([10,-8,0]) cylinder(d=3.2,h=3);
 translate([-10,-8,0]) cylinder(d=3.2,h=3);
-translate([19,-16,0]) cylinder(d=6,h=3);
-translate([-19,-16,0]) cylinder(d=6,h=3);
+translate([19,-15,0]) cylinder(d=6,h=3);
+translate([-19,-15,0]) cylinder(d=6,h=3);
 }
