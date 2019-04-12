@@ -39,7 +39,7 @@ void setmotor(int m, int v){
   int pwm = 8-i;
   int dir1 = 28+2*i;
   int dir2 = 29+2*i;
-  v = contrain (v,-255,255);
+  v = constrain(v,-255,255);
   digitalWrite(dir1,v>=0);
   digitalWrite(dir2,v<0);
   analogWrite(pwm,abs(v));
