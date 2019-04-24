@@ -10,17 +10,24 @@ translate([130,-21,-45])rotate([90,180,0])
 rearbogie2();
 translate([52,-19,-132])rotate([90,0,0])rearbogie3();
 
-translate([-170,-15,-148])rotate([90,0,0])
+translate([-170,-15,-136])rotate([90,0,0])
 wheelbracket1();
-translate([-170,-60,-70])rotate([0,0,90])
+translate([-170,-60,-60])rotate([0,0,90])
 wheelbracket2();
 
-translate([260,-12,-148])rotate([90,0,0])
+translate([260,-12,-136])rotate([90,0,0])
 wheelbracket1();
-translate([260,-57,-70])rotate([0,0,90])
+translate([260,-57,-60])rotate([0,0,90])
 wheelbracket2();
 
-translate([0,240,0])scale([1,-1,1]){
+translate([-170,-85,-135])rotate([-90,0,0])
+wheelrim_corner();
+translate([260,-85,-135])rotate([-90,0,0])
+wheelrim_corner();
+translate([55,-95,-135])rotate([-90,0,0])
+wheelrim_center();
+
+translate([0,280,0])scale([1,-1,1]){
 translate([-170,-60,-35])rotate([180,0,90])
 frontbogie1();
 rotate([90,0,0])frontbogie2();
@@ -33,18 +40,25 @@ translate([130,-21,-45])rotate([90,180,0])
 rearbogie2();
 translate([52,-19,-132])rotate([90,0,0])rearbogie3();
 
-translate([-170,-15,-148])rotate([90,0,0])
+translate([-170,-15,-136])rotate([90,0,0])
 wheelbracket1();
-translate([-170,-60,-70])rotate([0,0,90])
+translate([-170,-60,-60])rotate([0,0,90])
 wheelbracket2();
 
-translate([260,-12,-148])rotate([90,0,0])
+translate([260,-12,-136])rotate([90,0,0])
 wheelbracket1();
-translate([260,-57,-70])rotate([0,0,90])
+translate([260,-57,-60])rotate([0,0,90])
 wheelbracket2();
+
+translate([-170,-85,-135])rotate([-90,0,0])
+wheelrim_corner();
+translate([260,-85,-135])rotate([-90,0,0])
+wheelrim_corner();
+translate([55,-95,-135])rotate([-90,0,0])
+wheelrim_center();
 }
 
-translate([90,120,30])diffpivot();
+translate([90,140,30])diffpivot();
 
 module frontbogie1(){
 
@@ -374,4 +388,111 @@ translate([0,90,0])
 cube([10,10,10],center=true);
 translate([0,-90,0])
 cube([10,10,10],center=true);
+}
+
+module wheelrim_corner(){
+$fn=72;
+
+difference(){
+union(){
+cylinder(d=61.5,h=3);
+translate([0,0,3])
+cylinder(d=55.5,h=2);
+translate([0,0,5])
+cylinder(d1=55.5,d2=61.5,h=3);
+translate([0,0,8])
+cylinder(d=61.5,h=2);    
+translate([0,0,10])
+cylinder(d=55.5,h=26);
+translate([0,0,36])
+cylinder(d1=55.5,d2=61.5,h=3);    
+translate([0,0,39])
+cylinder(d=61.5,h=2);
+translate([0,0,41])
+cylinder(d=55.5,h=3);
+translate([0,0,43])
+cylinder(d1=55.5,d2=61.5,h=3);
+translate([0,0,46])
+cylinder(d=61.5,h=3);
+}
+translate([0,0,-1])
+cylinder(d=51.5,h=51);
+translate([0,0,-1])
+cylinder(d=3.2,h=4);
+
+for(i=[0:60:300])
+{
+    rotate([0,0,i])
+    translate([17,0,-1])
+    scale([1,1.5,1])
+    cylinder(d=10,h=4);
+}
+}
+for(i=[0:60:330])
+{
+    rotate([0,0,i])
+    translate([-1.5,7,0])
+    cube(size=[3,20,10]);
+}
+difference(){
+cylinder(d=18.4,h=10);
+translate([0,0,2])
+cylinder(d=14.4,h=9,$fn=6);
+translate([0,0,-1])
+cylinder(d=3.2,h=6);
+}
+}
+
+module wheelrim_center(){
+$fn=72;
+
+difference(){
+union(){
+cylinder(d=61.5,h=3);
+translate([0,0,3])
+cylinder(d=55.5,h=2);
+translate([0,0,5])
+cylinder(d1=55.5,d2=61.5,h=3);
+translate([0,0,8])
+cylinder(d=61.5,h=2);    
+translate([0,0,10])
+cylinder(d=55.5,h=26);
+translate([0,0,36])
+cylinder(d1=55.5,d2=61.5,h=3);    
+translate([0,0,39])
+cylinder(d=61.5,h=2);
+translate([0,0,41])
+cylinder(d=55.5,h=3);
+translate([0,0,43])
+cylinder(d1=55.5,d2=61.5,h=3);
+translate([0,0,46])
+cylinder(d=61.5,h=3);
+}
+translate([0,0,-1])
+cylinder(d=51.5,h=51);
+translate([0,0,-1])
+cylinder(d=3.2,h=4);
+
+for(i=[0:60:300])
+{
+    rotate([0,0,i])
+    translate([17,0,-1])
+    scale([1,1.5,1])
+    cylinder(d=10,h=4);
+}
+}
+for(i=[0:60:330])
+{
+    rotate([0,0,i])
+    translate([-1.5,7,0])
+    cube(size=[3,20,25]);
+}
+difference(){
+cylinder(d=18.4,h=25);
+translate([0,0,17])
+cylinder(d=14.4,h=24,$fn=6);
+translate([0,0,-1])
+cylinder(d=3.2,h=21);
+cylinder(d=8,h=15);
+}
 }
