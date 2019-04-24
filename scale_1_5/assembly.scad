@@ -20,6 +20,31 @@ wheelbracket1();
 translate([260,-57,-70])rotate([0,0,90])
 wheelbracket2();
 
+translate([0,240,0])scale([1,-1,1]){
+translate([-170,-60,-35])rotate([180,0,90])
+frontbogie1();
+rotate([90,0,0])frontbogie2();
+translate([130,0,-45])rotate([-90,0,180])
+frontbogie3();
+
+translate([260,-58,-33])rotate([180,0,90])
+rearbogie1();
+translate([130,-21,-45])rotate([90,180,0])
+rearbogie2();
+translate([52,-19,-132])rotate([90,0,0])rearbogie3();
+
+translate([-170,-15,-148])rotate([90,0,0])
+wheelbracket1();
+translate([-170,-60,-70])rotate([0,0,90])
+wheelbracket2();
+
+translate([260,-12,-148])rotate([90,0,0])
+wheelbracket1();
+translate([260,-57,-70])rotate([0,0,90])
+wheelbracket2();
+}
+
+translate([90,120,30])diffpivot();
 
 module frontbogie1(){
 
@@ -322,4 +347,31 @@ cylinder(d=6,h=10,center=true);
 
 cylinder(d=3.2,h=50,center=true);
 }
+}
+
+module diffpivot(){
+difference(){
+hull(){
+cylinder(d=50,h=10,center=true,$fn=120);
+rotate([90,0,0])
+cylinder(d=10,h=230,center=true,$fn=30);
+}
+translate([0,0,-5])linear_extrude(10)
+polygon([[17,0],[0,95],[-17,0]]);
+rotate([0,0,180])
+translate([0,0,-5])linear_extrude(10)
+polygon([[17,0],[0,95],[-17,0]]);
+translate([0,-95,0])rotate([90,0,0])
+cylinder(d=3.5,h=25,$fn=12);
+translate([0,95,0])rotate([-90,0,0])
+cylinder(d=3.5,h=25,$fn=12);
+}
+difference(){
+cylinder(d=50,h=10,center=true,$fn=120);
+cylinder(d=5,h=10,center=true,$fn=30);
+}
+translate([0,90,0])
+cube([10,10,10],center=true);
+translate([0,-90,0])
+cube([10,10,10],center=true);
 }
