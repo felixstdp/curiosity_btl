@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/felixstdp/curiosity_btl/master/scale_1_5/curiosity.jpg)
+
 BOM
 
 - 4 servos s3003
