@@ -6,7 +6,7 @@ scale_1_10 folder for 1:10 scale model
 - 6 x N20 dc motors
 
 scale_1_5 folder for 1:5 scale model
-- 4 x s3003 servos
+- 4 x s3003/996 servos
 - 6 x type 25D/2418 dc motors
 - 2 x RC car steering turnbuckle
 - https://www.batteryspace.com/li-ion-battery-14-8v-5-2ah-77wh-8a-rate-for-diving-light---un-38-3-passed.aspx
