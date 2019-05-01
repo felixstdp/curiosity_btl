@@ -1,9 +1,24 @@
+//       FRONT
+//  M1S1       M6S6
+//    \         /
+//     \       /
+//  M2-----------M5
+//     /       \
+//    /         \
+//  M3S3       M4S4
+//        REAR
+
 #include <Servo.h>
 
-#define s1center 90 // posiciones de centrado de los servos
-#define s2center 90
-#define s3center 90
-#define s4center 90
+#define s1center 85 // posiciones de centrado de los servos
+#define s3center 95
+#define s4center 100
+#define s6center 80
+
+#define s1giro 135 // posiciones de giro
+#define s3giro 45
+#define s4giro 150
+#define s6giro 35
 
 Servo servo1;
 Servo servo3;
@@ -17,7 +32,7 @@ void setup()
   {
     pinMode(i,OUTPUT); //pines PWM para velocidad
   }
-  for (int i = 30; i <= 42; i++)
+  for (int i = 34; i <= 46; i++)
   {
     pinMode(i,OUTPUT); //pines digitales para control de dirección
   }
@@ -28,27 +43,22 @@ void setup()
   servo6.attach(9);
   
   servo1.write(s1center); //arranque en posicion central
-  servo3.write(s2center);
-  servo4.write(s3center);
-  servo6.write(s4center);
+  servo3.write(s3center);
+  servo4.write(s4center);
+  servo6.write(s6center);
 
 }
 
 void loop()
 {
-  forward();
-  delay(2000);
-  reverse();
-  delay(2000);
-  brake();
-  delay(2000);
+
 }
 
 void setmotor(int m, int v)
 {
   int pwm = 8-m;
-  int dir1 = 28+2*m;
-  int dir2 = 29+2*m;
+  int dir1 = 32+2*m;
+  int dir2 = 33+2*m;
   v = constrain(v,-255,255);
   digitalWrite(dir1,v<0);
   digitalWrite(dir2,v>=0);
@@ -57,22 +67,58 @@ void setmotor(int m, int v)
 
 void forward()
 {
-  setmotor(1,128);
-  setmotor(2,128);
-  setmotor(3,128);
-  setmotor(4,128);
-  setmotor(5,128);
-  setmotor(6,128);
+  servo1.write(s1center); //posicion recta
+  servo3.write(s3center);
+  servo4.write(s4center);
+  servo6.write(s6center);
+  setmotor(1,120);
+  setmotor(2,255);
+  setmotor(3,255);
+  setmotor(4,255);
+  setmotor(5,255);
+  setmotor(6,255);
 }
 
 void reverse()
 {
-  setmotor(1,-128);
-  setmotor(2,-128);
-  setmotor(3,-128);
-  setmotor(4,-128);
-  setmotor(5,-128);
-  setmotor(6,-128);
+  servo1.write(s1center); //posicion recta
+  servo3.write(s3center);
+  servo4.write(s4center);
+  servo6.write(s6center);
+  setmotor(1,-120);
+  setmotor(2,-255);
+  setmotor(3,-255);
+  setmotor(4,-255);
+  setmotor(5,-255);
+  setmotor(6,-255);
+}
+
+void rotateR()
+{
+  servo1.write(s1giro); //posicion giro
+  servo3.write(s3giro);
+  servo4.write(s4giro);
+  servo6.write(s6giro);
+  setmotor(1,120);
+  setmotor(2,255);
+  setmotor(3,255);
+  setmotor(4,-255);
+  setmotor(5,-255);
+  setmotor(6,-255);
+}
+
+void rotateL()
+{
+  servo1.write(s1giro); //posicion giro
+  servo3.write(s3giro);
+  servo4.write(s4giro);
+  servo6.write(s6giro);
+  setmotor(1,-120);
+  setmotor(2,-255);
+  setmotor(3,-255);
+  setmotor(4,255);
+  setmotor(5,255);
+  setmotor(6,255);
 }
 
 void brake()
