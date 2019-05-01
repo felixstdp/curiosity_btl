@@ -51,7 +51,7 @@ void setup()
 
 void loop()
 {
-  int aleatorio = random(5);
+  int aleatorio = random(4);
   switch(aleatorio) {
     
     case 0:
@@ -68,12 +68,8 @@ void loop()
       break;
     case 3:
       rotateR();
-      balizargb(1,1,0)
+      balizargb(1,1,0);
       break;
-    case 4:
-      brake();
-      balizargb(0,1,0)
-      break:
   }
   delay(3000);
     
