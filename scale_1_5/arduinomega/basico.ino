@@ -51,14 +51,39 @@ void setup()
 
 void loop()
 {
-
+  int aleatorio = random(5);
+  switch(aleatorio) {
+    
+    case 0:
+      forward();
+      balizargb(1,1,1);
+      break;
+    case 1:
+      reverse();
+      balizargb(0,0,1);
+      break;
+    case 2:
+      rotateL();
+      balizargb(1,0,1);
+      break;
+    case 3:
+      rotateR();
+      balizargb(1,1,0)
+      break;
+    case 4:
+      brake();
+      balizargb(0,1,0)
+      break:
+  }
+  delay(3000);
+    
 }
 
 void setmotor(int m, int v)
 {
   int pwm = 8-m;
-  int dir1 = 32+2*m;
-  int dir2 = 33+2*m;
+  int dir1 = 28+2*m;
+  int dir2 = 29+2*m;
   v = constrain(v,-255,255);
   digitalWrite(dir1,v<0);
   digitalWrite(dir2,v>=0);
@@ -129,4 +154,11 @@ setmotor(3,0);
 setmotor(4,0);
 setmotor(5,0);
 setmotor(6,0);
+}
+
+void balizargb(boolean r, boolean g, boolean b)
+{
+  digitalWrite(19,r); //rojo
+  digitalWrite(20,g); //verde
+  digitalWrite(21,b); //azul
 }
