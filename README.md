@@ -9,7 +9,7 @@ scale_1_5 folder for 1:5 scale model
 - 4 x s3003/996 servos
 - 6 x type 25D/2418 dc motors
 - 2 x RC car steering turnbuckle
-- 2S High capacity LiPo battery (eg. https://www.batteryspace.com/li-ion-battery-14-8v-5-2ah-77wh-8a-rate-for-diving-light---un-38-3-passed.aspx)
+- 2S High capacity LiPo battery (e.g. https://www.batteryspace.com/li-ion-battery-14-8v-5-2ah-77wh-8a-rate-for-diving-light---un-38-3-passed.aspx)
 
 .scad files for OpenScad
 .stl files for printing
