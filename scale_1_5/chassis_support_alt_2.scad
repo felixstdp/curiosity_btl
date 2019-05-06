@@ -1,5 +1,5 @@
 difference(){
-translate([-25,0,0])cube([50,36,10]);
+translate([-26,0,0])cube([52,36,10]);
 translate([0,20,0])cylinder(d=5,h=10,$fn=20);
 translate([-20,0,5])rotate([-90,0,0])
     cylinder(d=3.2,h=50,$fn=20);
