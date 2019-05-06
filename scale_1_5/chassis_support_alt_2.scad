@@ -1,21 +1,16 @@
 difference(){
-translate([-15,0,0])cube([30,36,10]);
+translate([-25,0,0])cube([50,36,10]);
 translate([0,20,0])cylinder(d=5,h=10,$fn=20);
-}
-
-difference(){
-translate([-25,0,0])cube([50,6,10]);
 translate([-20,0,5])rotate([-90,0,0])
-    cylinder(d=3.2,h=10,$fn=20);
+    cylinder(d=3.2,h=50,$fn=20);
 translate([20,0,5])rotate([-90,0,0])
-    cylinder(d=3.2,h=10,$fn=20);
-}
-
-translate([0,30,0])
-difference(){
-translate([-25,0,0])cube([50,6,10]);
-translate([-20,0,5])rotate([-90,0,0])
-    cylinder(d=3.2,h=10,$fn=20);
-translate([20,0,5])rotate([-90,0,0])
-    cylinder(d=3.2,h=10,$fn=20);
+    cylinder(d=3.2,h=50,$fn=20);
+translate([15,7,0])cube([10,22,10]);    
+translate([16,6,0])cube([10,24,10]);
+translate([16,7,0])cylinder(d=2,h=10,$fn=12);
+translate([16,29,0])cylinder(d=2,h=10,$fn=12);    
+translate([-25,7,0])cube([10,22,10]);    
+translate([-26,6,0])cube([10,24,10]);
+translate([-16,7,0])cylinder(d=2,h=10,$fn=12);
+translate([-16,29,0])cylinder(d=2,h=10,$fn=12);  
 }
