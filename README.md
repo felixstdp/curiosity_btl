@@ -16,7 +16,8 @@ scale_1_5 folder for 1:5 scale model
 .ino files for Arduino
 .jpg files for images
 
-https://bricolabs.cc/wiki/proyectos/curiosity_btl
+https://bricolabs.cc/wiki/en/proyectos/curiosity_btl (english)
+https://bricolabs.cc/wiki/proyectos/curiosity_btl (spanish)
 
 ![alt text](https://github.com/fstdp/curiosity_btl/blob/master/curiosities.jpg)
 
