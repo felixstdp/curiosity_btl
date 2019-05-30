@@ -4,7 +4,8 @@ translate([4,-82.5,0])rotate([0,-90,-15])
 translate([16.5,-9.5,0])
 servo_bracket();
 
-translate([-4,-82.5,0])cube([8,78.5,8]);
+rotate([-12,0,0])
+translate([-4,-82.5,-1])cube([8,78.5,8]);
 
 difference(){
 cylinder(d=15,h=12.5);
