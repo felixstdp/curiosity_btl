@@ -5,7 +5,7 @@ translate([16.5,-9.5,0])
 servo_bracket();
 
 rotate([-12,0,0])
-translate([-4,-82.5,-1])cube([8,78.5,8]);
+translate([-4,-83,-.8])cube([8,78.5,8]);
 
 difference(){
 cylinder(d=15,h=12.5);
@@ -45,6 +45,7 @@ translate([-13.75,0,-1])cylinder(d=2.2,h=50,$fn=10);
 translate([5.5,0,0])
 difference(){
 cylinder(d=25,h=8);
-cylinder(d=15,h=8);
+cylinder(d=16.4,h=5);
+translate([0,0,5])cylinder(d=14,h=3);   
 }
 }
