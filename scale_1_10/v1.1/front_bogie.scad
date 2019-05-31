@@ -37,15 +37,15 @@ cylinder(d=3,h=7,center=true);
 
 module servo_bracket(){
 difference(){
-translate([0,0,10])cube([33,18,5],center=true);
+translate([0,0,18])cube([33,18,11],center=true);
 cube([23.4,12.4,50],center=true);
 translate([13.75,0,-1])cylinder(d=2.2,h=50,$fn=10);
 translate([-13.75,0,-1])cylinder(d=2.2,h=50,$fn=10);
 }
 translate([5.5,0,0])
 difference(){
-cylinder(d=25,h=8);
+cylinder(d=25,h=12.5);
 cylinder(d=16.4,h=5);
-translate([0,0,5])cylinder(d=14,h=3);   
+translate([0,0,5])cylinder(d=14,h=8);   
 }
 }
