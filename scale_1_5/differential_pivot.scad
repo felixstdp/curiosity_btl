@@ -4,7 +4,7 @@ difference(){
 hull(){
 cylinder(d=50,h=10,center=true,$fn=120);
 rotate([90,0,0])
-cylinder(d=10,h=230,center=true,$fn=30);
+cylinder(d=10,h=235,center=true,$fn=30);
 }
 translate([0,0,-5])linear_extrude(10)
 polygon([[17,0],[0,90],[-17,0]]);
@@ -21,8 +21,8 @@ cube([10,10,10],center=true);
 translate([0,-85,0])
 cube([10,10,10],center=true);
 }
-translate([0,-85,0])rotate([90,0,0])
-cylinder(d=3.5,h=40,$fn=12);
-translate([0,85,0])rotate([-90,0,0])
-cylinder(d=3.5,h=40,$fn=12);
+translate([0,-82,0])rotate([90,0,0])
+cylinder(d=3.5,h=50,$fn=12);
+translate([0,82,0])rotate([-90,0,0])
+cylinder(d=3.5,h=50,$fn=12);
 }
