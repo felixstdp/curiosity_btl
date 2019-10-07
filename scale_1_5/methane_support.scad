@@ -11,9 +11,9 @@ difference(){
 }
 difference(){
 translate([6,10,8])rotate([0,90,0])
-    cylinder(d=15,h=20,$fn=60);
+    cylinder(d=14,h=20,$fn=60);
 translate([5,10,8])rotate([0,90,0])
-    cylinder(d=10,h=22,$fn=60);
+    cylinder(d=8.6,h=22,$fn=60);
 translate([5,10,16])rotate([0,90,0])
     cylinder(d=12,h=22,$fn=10);
 }
@@ -30,6 +30,5 @@ difference(){
     translate([29.5,17.5,0])
     cylinder(d=2.5,h=4,$fn=12);
     translate([12,10,0])
-    cylinder(d=15,h=4,$fn=30);
-    
+    cylinder(d=16,h=4,$fn=30);
 }
