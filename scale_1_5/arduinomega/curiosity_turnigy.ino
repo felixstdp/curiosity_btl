@@ -70,7 +70,6 @@ void loop()
 //  }
 //  Serial.println();
   
-  Serial.println(chval[5]);
   if (chval[5]<1000)
   {
     drive(throttle,turn);
