@@ -14,7 +14,7 @@ void loop()
   
   for(int i = 0; i < chnum; i++) 
   {
-    Serial.print(chval[i]);
+    Serial.print(chval[i]); // muestra los valores por el puerto serie
     Serial.print("\t");
   }
   Serial.println();
@@ -27,9 +27,8 @@ int readppm()
   
   for(int i=0; i<chnum; i++)
   {
-    chval[i]=pulseIn(PPMpin, HIGH, 10000);
+    chval[i]=pulseIn(PPMpin, HIGH, 10000); //lee secuencialmente todos los canales
   }
   
-  // devuleve el resultado
-  return chval[chnum];
+  return chval[chnum]; // devuleve el resultado
 }  
