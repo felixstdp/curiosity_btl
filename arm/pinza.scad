@@ -1,0 +1,27 @@
+$fn=240;
+difference(){
+union(){
+difference(){
+    cylinder(d=80,h=10);
+    translate([0,0,-1])
+    cylinder(d=77,h=12);
+}
+translate([7.5,0,0])
+difference(){
+    cylinder(d=65,h=10);
+    translate([0,0,-1])
+    cylinder(d=62,h=12);
+}
+translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,45])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,67.5])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,90])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,112.5])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,-45])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,-67.5])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,-90])translate([0,-.75,0])cube([40,1.5,10]);
+rotate([0,0,-112.5])translate([0,-.75,0])cube([40,1.5,10]);
+}
+    translate([45,0,-1])cylinder(d=45,h=12);
+    translate([7.5,0,0])cylinder(d=62,h=12);
+}
