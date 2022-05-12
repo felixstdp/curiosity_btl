@@ -1,0 +1,111 @@
+====== Curiosity BTL ======
+
+<WRAP tip> **Curiosity MSL** \\
+**1.** La Mars Science Laboratory (abreviada MSL), conocida como Curiosity (Curiosidad en español), es una misión espacial que incluye un astromóvil de exploración marciana dirigida por la NASA. Fuente: [[https://es.wikipedia.org/wiki/Curiosity|Wikipedia]]</WRAP>
+
+Curiosity BTL (Bricolabs Technology Laboratory) es un proyecto para replicar a escala el rover marciano MSL en un modelo imprimible.
+
+{{:proyectos:curiosity:curiosity_2_800.jpg?800|}}
+
+Afortunadamente no tendrá que llegar a tus manos en una maniobra como los [[https://www.jpl.nasa.gov/infographics/infographic.view.php?id=10776|7 minutos de terror]], o en el estado de la pobre [[https://es.wikipedia.org/wiki/Schiaparelli_EDM|Schiaparelli]]. Toda la información necesaria para construirla y programarla estará aquí.
+
+===== Mecánica =====
+
+La parte mecánica es un curioso mecanismo con balancines llamado [[https://es.wikipedia.org/wiki/Rocker-bogie|rocker-bogie]] y una barra estabilizadora que equilibra los trenes de ambos lados. Tiene 6 ruedas motrices y 4 ruedas directrices. Según NASA es capaz de superar obstáculos dos veces el diámetro de la rueda.
+
+Hay dos diseños, a escalas 1:10 y 1:5.
+
+==== Modelo escala 1:10 ====
+
+{{:proyectos:curiosity:curiosity_1_800.jpg?800|}}
+
+El diseño a escala 1:10 ya está completo en [[https://github.com/felixstdp/curiosity_btl|Github]] y [[https://www.thingiverse.com/thing:2414954|Thingiverse]]. Cada rueda de Curiosity tiene una llanta de PLA, una cubierta de Filaflex y un motor N20 encastrado. Serán motores lentos como lo es la [[https://t.co/zsaHbfqFHM?amp=1|MSL]] en la realidad. En principio con reducción 1:300. No esperéis que Curiosity compita con los velocistas de la LNR.
+
+{{:proyectos:curiosity:curiosity_btl3.jpg?640|}}
+
+Las cuatro ruedas de los extremos giran 180º con un servo 9g.
+
+  * 4 servos 9g
+  * 6 motores N20
+  * tornillería variada M2.5, M3 y M4
+
+==== Modelo escala 1:5 ====
+
+El diseño completo de las piezas imprimibles está en [[https://github.com/felixstdp/curiosity_btl/tree/master/scale_1_5|Github]] y [[https://www.thingiverse.com/thing:3556381|Thingiverse]]. Las ruedas son comerciales, pero con una llanta alternativa imprimible.
+
+{{:proyectos:curiosity:cbtl_4.jpg?800|}}
+
+{{:proyectos:curiosity:cbtl_1.jpg?800|}}
+
+{{:proyectos:curiosity:cbtl_2.jpg?600|}}
+
+{{:proyectos:curiosity:cbtl_3.jpg?800|}}
+
+  * 4 servos 3003
+  * 6 motores 2418 / 25D
+  * 4 rodamientos 15x35x11
+  * 8 perfiles de aluminio 10x10mm (2 x 135mm, 2 x 125mm, 2 x 100mm, 2 x 115mm)
+  * Una plancha de 3mm de Dibond de 240x280mm (opcional marco de perfil de aluminio por debajo)
+  * Tornillería variada de M2.5, M3, M4 y M5.
+  * 6 ruedas Dagu de Pololu.
+
+En este [[https://youtu.be/SUMJhzagFPE|enlace]] puedes verlo en funcionamiento.
+==== Variantes (fork) ====
+
+Escala 1:15 por @diegogg https://www.thingiverse.com/thing:3432863
+
+===== Electrónica =====
+
+Para controlar 6 motores con inversión de giro y 4 servos necesitamos muchas salidas PWM. Una manera de hacerlo que permite ser controlado indistintamente con un Arduino o una Raspberry Pi es basarse en una controladora de 16 servos con bus i2c de [[https://www.adafruit.com/product/815|Adafruit]].
+
+La alternativa sencilla a esto es utilizar un Arduino Mega2560, en su versión original o la [[https://es.aliexpress.com/store/product/WAVGAT-Mega-2560-PRO-MINI-5V-Embed-CH340G-ATmega2560-16AU-with-male-pinheaders-Compatible-for-arduino/1962508_32964918763.html|versión compacta]] que se ofrece como alternativa (aunque con chip de comunicaciones CH340). Para la versión 1:10 se han utilizado drivers L9110. Para la versión XL se han utilizado drivers L298.
+
+Para el Arduino Mega original se ha utilizado una [[http://3dmodularsystems.com/en/arduino/531-mega-sensor-shield-v12-expansion-board-with-xbee.html|shield]] que replica todas las salidas añadiendo a cada una alimentación y masa, y además tiene un zócalo para un módulo BluetoothBee. Con ella y los drivers L298, puede hacerse un cableado muy limpio con una cinta Dupont hembra-hembra de 20 cm con 19 cables con el siguiente orden:
+
+7-30-31-32-33-6-5-34-35-36-37-4-3-38-39-40-41-2-GND
+
+{{:proyectos:curiosity:foto_11-4-19_20_15_45.jpg?1000|}}
+
+Esa disposición de cableado permite utilizar un código muy sencillo para operar cada motor por separado.
+
+<code>
+void setmotor(int m, int v){
+int pwm = 8-m;
+int dir1 = 28+2*m;
+int dir2 = 29+2*m;
+v = constrain (v,-255,255);
+digitalWrite(dir1,v>=0);
+digitalWrite(dir2,v<0);
+analogWrite(pwm,abs(v));
+}
+</code>
+
+Puedes ver más detalles del uso de ese driver de motores (y otros) e nuestra [[https://bricolabs.cc/wiki/guias/control_de_motores|wiki]].
+
+{{:proyectos:curiosity:cableado.jpg?600|}}
+
+En el mástil irá montada una cámara para poder conducir Curiosity por radiocontrol con gafas FPV (First Person View) o un monitor externo. Puede ser una cámara dedicada como las usadas en drones o una GoPro. En cualquier caso será un sistema independiente del control de movimiento, tanto si este es autónomo como si es teledirigido desde Bluetooth o con un mando infrarrojo.
+
+===== Programación =====
+
+Avanzar recto o girar sobre su propio eje serán maniobras relativamente sencillas. Programar el giro de los servos y la velocidad de cada rueda para describir una curva todo un reto geométrico.
+
+Los programas para Arduino MEGA están [[https://github.com/felixstdp/curiosity_btl/tree/master/scale_1_5/arduinomega|aquí]]
+
+==== Programa básico para Arduino ====
+
+José Antonio Vacas @javacasm tieen ya un [[https://github.com/javacasm/curiosity_btl|desarrollo]] basado en Arduino con diferentes niveles de complejidad, con los programas y los esquemas electrónicos.
+
+===== Equipo =====
+
+  * [[:user:felixstdp|Félix]]
+  * [[https://twitter.com/javacasm?lang=es|@javacasm]]
+  * [[https://twitter.com/diegogg?lang=es|@diegogg]]
+
+===== Enlaces =====
+
+  * [[https://github.com/felixstdp/curiosity_btl|Repositorio del proyecto en Github (Félix)]]
+  * [[https://www.thingiverse.com/thing:2414954|Repositorio de las piezas en Thingiverse 1:10]]
+  * [[https://www.thingiverse.com/thing:3556381|Repositorio de las piezas en Thingiverse 1:5]]
+  * [[https://github.com/javacasm/curiosity_btl|Repositorio de programas de @javacasm]]
+  * [[https://www.thingiverse.com/thing:3432863|Modelo a escala 1:15 de @diegogg del CEIP García Lorca]]
