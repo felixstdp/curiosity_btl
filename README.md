@@ -1,7 +1,7 @@
 # curiosity_btl
 files for Curiosity Bricolabs Technology Laboratory project
 
-scale_1_10 folder for 1:10 scale model
+scale_1_10 folder for 1:10 scale model (this model has evolved to [Perseverance](https://github.com/felixstdp/Perseverance))
 - 4 x 9g servos
 - 6 x N20 dc motors
 
