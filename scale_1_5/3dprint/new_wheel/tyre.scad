@@ -1,9 +1,9 @@
 $fn=90;
 
 h=76/8;
-d_ext=100;
-giro=[0,0,-6,6,0,-6,6,0];
-helice=[0,6,-12,6,6,-12,6,0];
+d_ext=97.5;
+giro=[0,0,-6,6,0,-6,6,0]/1.5;
+helice=[0,6,-12,6,6,-12,6,0]/1.5;
 
 difference(){
 union(){
@@ -21,7 +21,7 @@ cylinder(d=3,h=0.000001);
 }
 }
 }
-cylinder(d=100,h=h*8);
+cylinder(d=97.5,h=h*8);
 }
-translate([0,0,-1])cylinder(d=97,h=h*8+2);
+translate([0,0,-1])cylinder(d=94.5,h=h*8+2);
 }
