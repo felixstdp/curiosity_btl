@@ -23,5 +23,5 @@ cylinder(d=3,h=0.000001);
 }
 cylinder(d=100,h=h*8);
 }
-translate([0,0,-1])cylinder(d=96,h=h*8+2);
+translate([0,0,-1])cylinder(d=97,h=h*8+2);
 }
