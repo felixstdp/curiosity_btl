@@ -24,8 +24,7 @@ for(i=[0:60:330])
 }
 difference(){
 cylinder(d=25,h=20,$fn=60);
-translate([0,0,10])
-cylinder(d=14.4,h=11,$fn=6);
-translate([0,0,-1])
-cylinder(d=3.2,h=16);
+translate([0,0,10])cylinder(d=14.4,h=11,$fn=6);
+translate([0,0,-1])cylinder(d=3.2,h=16);
+translate([0,0,-1])cylinder(d=8,h=9);
 }
