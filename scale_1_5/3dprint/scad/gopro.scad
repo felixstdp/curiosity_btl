@@ -1,9 +1,0 @@
-$fn=60;
-r=4;
-difference(){
-minkowski(){
-sphere(r);
-translate([r,r,r])cube([62.3-2*r,44.9-2*r,28.3-2*r]);
-}
-translate([22.45,25,-10])cube([15,10,100]);
-}
