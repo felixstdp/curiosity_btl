@@ -1,8 +1,8 @@
-3D printed wheels version
+Versión con ruedas impresas
 
 ![alt text](https://raw.githubusercontent.com/felixstdp/curiosity_btl/master/scale_1_5/assembly.jpg)
 
-Commercial Pololu Dagu wheels version
+Versión con ruedas comerciales Pololu Dagu
 
 ![alt text](https://raw.githubusercontent.com/felixstdp/curiosity_btl/master/scale_1_5/curiosity.jpg)
 
@@ -20,4 +20,4 @@ BOM
 
 Las piezas con nombre 'atrezzo' no son funcionales, sólo decorativas para parecerse más al Curiosity MLS.
 
-La impresión de todas las piezas necesita alrededor de 1kg de plástico y 60-70h.
+La impresión de todas las piezas necesita alrededor de 1kg de plástico y 60-70h. La impresión de las cubiertas (tyre) con material elástico 50-60h.
