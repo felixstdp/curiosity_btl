@@ -1,3 +1,9 @@
+3D printed wheels version
+
+![alt text](https://raw.githubusercontent.com/felixstdp/curiosity_btl/master/scale_1_5/assembly.jpg)
+
+Commercial Pololu Dagu wheels version
+
 ![alt text](https://raw.githubusercontent.com/felixstdp/curiosity_btl/master/scale_1_5/curiosity.jpg)
 
 BOM
