@@ -19,5 +19,8 @@ difference(){
     translate([0,0,50])cube([70,140,144],center=true);
 }
 
+difference(){
 translate([0,0,1])
 cube([70,93.6,2],center=true);
+cylinder(d=3.2,h=3);
+}
