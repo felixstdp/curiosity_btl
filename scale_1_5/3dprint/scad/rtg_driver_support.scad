@@ -8,6 +8,8 @@ cylinder(d=100.5,h=13,$fn=6);
 translate([-56.9,0,0])cube([113.8,16,8]);
 }
 translate([0,0,3])cylinder(d=97,h=11,$fn=6);
+translate([0,4,4.5])rotate([0,90,0])cylinder(d=2.35,h=200,center=true);
+translate([0,12,4.5])rotate([0,90,0])cylinder(d=2.35,h=200,center=true);
 }
 
     
