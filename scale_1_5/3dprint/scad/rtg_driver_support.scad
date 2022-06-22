@@ -3,13 +3,14 @@ difference(){
 
 union(){    
 difference(){
+union(){
 cylinder(d=100.5,h=13,$fn=6);
+translate([-56.9,0,0])cube([113.8,16,8]);
+}
 translate([0,0,3])cylinder(d=97,h=11,$fn=6);
 }
-difference(){
-translate([-56.9,0,0])cube([113.8,8,8]);
-translate([-45,0,0])cube([90,8,8]);
-}    
+
+    
 for(i=[0:120:300]){
 rotate([0,0,i])translate([0,39.5,7]) 
     cube([41,8,12],center=true);    
