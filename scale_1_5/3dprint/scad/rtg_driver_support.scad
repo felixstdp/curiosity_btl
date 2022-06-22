@@ -15,21 +15,21 @@ translate([0,12,4.5])rotate([0,90,0])cylinder(d=2.35,h=200,center=true);
     
 for(i=[0:120:300]){
 rotate([0,0,i])translate([0,39.5,7]) 
-    cube([41,8,12],center=true);    
+    cube([47,8,12],center=true);    
 }
 }
 translate([0,0,-1])cylinder(d=72,h=14,$fn=6);    
     
 for(i=[0:120:300]){
 rotate([0,0,i]){
-    translate([-16,0,9])rotate([-90,0,0])
-    cylinder(d=3.2,h=100);
-    translate([16,0,9])rotate([-90,0,0])
-    cylinder(d=3.2,h=100);
-    translate([-12,0,3])cube([24,120,11]);
+    translate([-18,0,9])rotate([-90,0,0])
+    cylinder(d=2.9,h=100);
+    translate([18,0,9])rotate([-90,0,0])
+    cylinder(d=2.9,h=100);
+    translate([-16,0,3])cube([32,120,11]);
 }
 }
-translate([-12,0,-1])cube([24,120,11]);
+translate([-16,0,-1])cube([32,120,11]);
 }
 
 difference(){
