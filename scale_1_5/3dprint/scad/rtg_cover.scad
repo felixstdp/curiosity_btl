@@ -1,26 +1,23 @@
-$fn=120;
-
-//difference(){
-//    cylinder(d=36,h=120);
-//    translate([0,0,-1])cylinder(d=32,h=122);
-//}
-//
-//for (j=[0:60:300]){
-//    rotate([0,0,j])
-//    translate([18,-1,0])
-//    cube([30,2,120]);
-//}
-
+$fn=12;
 difference(){
-    rotate([0,0,30])
-    cylinder(d=134,h=120,$fn=6);
-    rotate([0,0,30])translate([0,0,2])
-    cylinder(d=131.6,h=130,$fn=6);
-    translate([0,0,50])cube([70,140,144],center=true);
+union(){
+difference(){
+rotate([0,0,30])cylinder(d=123.8,h=90,$fn=6);
+rotate([0,0,30])translate([0,0,1.5])
+    cylinder(d=121.4,h=130,$fn=6);
+translate([0,0,50])cube([60,140,144],center=true);
+}
+mirror([1,0,0])translate([-53,16,80])rotate([90,0,0])
+linear_extrude(16){
+polygon([[0,0],[1,1],[1,10],[0,10]]);
+}
+translate([-53,16,80])rotate([90,0,0])
+linear_extrude(16){
+polygon([[0,0],[1,1],[1,10],[0,10]]);
+}
+}
+translate([0,4,85.5])rotate([0,90,0])cylinder(d=2.5,h=200,center=true);
+translate([0,12,85.5])rotate([0,90,0])cylinder(d=2.5,h=200,center=true);
 }
 
-difference(){
-translate([0,0,1])
-cube([70,93.6,2],center=true);
-cylinder(d=3.2,h=3);
-}
+translate([0,0,.75])cube([60,89.2,1.5],center=true);
