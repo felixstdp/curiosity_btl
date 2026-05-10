@@ -1,5 +1,7 @@
 $fn=20;
 
+difference(){
+union(){
 translate([0,0,5])
 difference(){
     cylinder(d=45,h=15,$fn=60);
@@ -22,8 +24,7 @@ translate([0,0,25])cube([100,100,10],center=true);
 
 
 $fn=12;
-translate([10,0,0])
-rotate([0,0,90])
+translate([10,0,0])rotate([0,0,90])
 difference(){
 cube([26,58,10],center=true);
 cube([20.5,40.5,12],center=true);
@@ -31,4 +32,8 @@ translate([5,25,-6])cylinder(d=2.5,h=12);
 translate([-5,25,-6])cylinder(d=2.5,h=12);
 translate([-5,-25,-6])cylinder(d=2.5,h=12);
 translate([5,-25,-6])cylinder(d=2.5,h=12);
+}
+}
+translate([10,0,-1])rotate([0,0,90])
+cube([20.5,40.5,12],center=true);
 }
