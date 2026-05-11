@@ -3,7 +3,7 @@ $fn=20;
 translate([0,0,5])
 difference(){
     cylinder(d=45,h=15,$fn=60);
-    translate([0,0,4])cylinder(d=35.6,h=12,$fn=60);
+    translate([0,0,4])cylinder(d=35.25,h=12,$fn=60);
     translate([0,0,-1])cylinder(d=25,h=12,$fn=60);
 }
 
